@@ -18,5 +18,4 @@ RUN apt-get update && \
         pip install spacy uvicorn pydantic fastapi[all] && \
     python -m spacy download en_core_web_sm
 
-CMD ["sh"]
-EXPOSE 8000
+ENTRYPOINT [ "sh" ]
