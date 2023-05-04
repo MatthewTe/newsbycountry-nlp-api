@@ -18,4 +18,4 @@ RUN apt-get update && \
         pip install spacy uvicorn pydantic fastapi[all] && \
     python -m spacy download en_core_web_sm
 
-ENTRYPOINT [ "sh" ]
+CMD ["uvicorn", "nlp_api.main:app", "--reload", "--host",  "0.0.0.0"]
